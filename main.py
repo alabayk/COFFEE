@@ -1,10 +1,9 @@
-import sqlite3
 import sys
 
 from PyQt5 import uic
 from PyQt5.QtSql import QSqlDatabase, QSqlTableModel
 from PyQt5.QtWidgets import QApplication
-from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
+from PyQt5.QtWidgets import QMainWindow
 
 
 class MyWidget(QMainWindow):
@@ -18,8 +17,6 @@ class MyWidget(QMainWindow):
         model.setTable('COFFEE')
         model.select()
 
-        # Для отображения данных на виджете
-        # свяжем его и нашу модель данных
         self.view.setModel(model)
         self.setWindowTitle('COFFEE')
 
